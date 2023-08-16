@@ -1,0 +1,40 @@
+.divlogotitle {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
+
+
+.sectionMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #674483;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+.divlogotitle{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.imglogo {
+    max-width: 50px;
+    border-radius: 50%;
+    background-image: url("../../multimedia/Bemust.png");
+}
+
+.h1title {
+    margin-left: 1rem;
+    color: white;
+}
+.navbar{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
