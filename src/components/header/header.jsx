@@ -1,6 +1,6 @@
 import './header.css';
-import Bm from "../../multimedia/Bemust.png"
-
+import Bm from "../../multimedia/Bemust.png";
+import { Link } from 'react-router-dom';
 
 export default function Header(){
     return(
@@ -13,12 +13,12 @@ export default function Header(){
             <div>
             <div class="navbar">
                 <ul class="navbar">
-                    <li class="item"><a href="" class="link">Inicio</a> </li>
-                    <li class="item"><a href="./padspagina/pad.html" class="link">Pads</a></li>
-                    <li class="item"><a href="./personalizacionespag/personalizados.html" class="link">Personalización</a></li>
-                    <li class="item"><a href="" class="link">Contacto</a></li>
-                    <li class="item"><a href="" class="link">Iniciar Sesión</a></li>
-                    <li class="item"><a href="" class="link">Registrarse</a></li>
+                    <li class="item"><Link to="/" class="link">Inicio</Link> </li>
+                    <li class="item"><Link href="./padspagina/pad.html" class="link">Pads</Link></li>
+                    <li class="item"><Link href="./personalizacionespag/personalizados.html" class="link">Personalización</Link></li>
+                    <li class="item"><Link href="" class="link">Contacto</Link></li>
+                    <li class="item"><Link href="" class="link">Iniciar Sesión</Link></li>
+                    <li class="item"><Link to="/registro" class="link">Registrarse</Link></li>
                 </ul>
             </div>
             </div>

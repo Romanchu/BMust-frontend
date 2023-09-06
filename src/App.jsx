@@ -1,12 +1,42 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './components/header/header.jsx';
 import Body from './components/body/body.jsx';
+import Registro from './components/register/registro'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
     <>
-    <Header></Header>
-    <Body></Body>
+      <Router>
+
+        <Routes>
+
+          <Route 
+            path='/'
+            element={
+            <>
+              <Header />
+              <Body />
+              <Registro />
+            </>
+            }
+          />
+
+          <Route 
+            path='/registro'
+            element={
+            <>
+              <Header />
+              <Registro />
+            </>
+            }
+          />
+
+        </Routes>
+
+      </Router>
     </>
   );
 }
