@@ -50,7 +50,7 @@ function Registro() {
           />
         </div>
         <div className="campo">
-          <label htmlFor="correoElectronico"  >Correo Electrónico</label>
+          <label htmlFor="correoElectronico">Correo Electrónico</label>
           <input
             type="email"
             id="correoElectronico"
@@ -59,11 +59,13 @@ function Registro() {
             required
           />
         </div>
-        <button class="boton2" type="submit">Registrarse</button>
+        <button className="boton" type="submit">Enviar</button>
       </form>
     </div>
   );
 }
 
 export default Registro;
+
+
 
