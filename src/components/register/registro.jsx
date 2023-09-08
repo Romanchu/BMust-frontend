@@ -1,99 +1,69 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import './registro.css'; 
 
-class Registro extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: '',
-      password: '',
-      confirm_password: '',
-      email: '',
-      error: '',
-    };
-  }
+function Registro() {
+  // Estados para los campos del formulario
+  const [usuario, setUsuario] = useState('');
+  const [contrasena, setContrasena] = useState('');
+  const [repetirContrasena, setRepetirContrasena] = useState('');
+  const [correoElectronico, setCorreoElectronico] = useState('');
 
-  handleSubmit = (e) => {
+  // Manejar el envío del formulario
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const { password, confirm_password } = this.state;
-
-    if (password !== confirm_password) {
-      this.setState({ error: 'Las contraseñas no coinciden' });
-    } else {
-      // Enviar los datos al servidor o realizar otras acciones aquí
-      console.log('Datos enviados:', this.state);
-    }
+    // Aquí puedes agregar la lógica para enviar los datos a tu servidor o hacer lo que necesites
+    console.log('Datos enviados:', { usuario, contrasena, correoElectronico });
   };
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-      error: '', // Limpiar cualquier mensaje de error al escribir
-    });
-  };
-
-  render() {
-    const { username, password, confirm_password, email, error } = this.state;
-
-    return (
-      <div>
-        <h1>Registro</h1>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Nombre de Usuario:
-            <input
-              type="text"
-              name="username"
-              value={username}
-              onChange={this.handleChange}
-              required
-            />
-          </label>
-          <br />
-
-          <label>
-            Contraseña:
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-              required
-            />
-          </label>
-          <br />
-
-          <label>
-            Repetir Contraseña:
-            <input
-              type="password"
-              name="confirm_password"
-              value={confirm_password}
-              onChange={this.handleChange}
-              required
-            />
-          </label>
-          <br />
-
-          <label>
-            Correo Electrónico:
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-              required
-            />
-          </label>
-          <br />
-
-          <input type="submit" value="Registrarse" />
-        </form>
-      </div>
-    );
-  }
+  return (
+    <div className="registro-container">
+      <form onSubmit={handleSubmit}>
+        <h2>Registro</h2>
+        <div className="campo">
+          <label htmlFor="usuario">Usuario</label>
+          <input
+            type="text"
+            id="usuario"
+            value={usuario}
+            onChange={(e) => setUsuario(e.target.value)}
+            required
+          />
+        </div>
+        <div className="campo">
+          <label htmlFor="contrasena">Contraseña</label>
+          <input
+            type="password"
+            id="contrasena"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+            required
+          />
+        </div>
+        <div className="campo">
+          <label htmlFor="repetirContrasena">Repetir Contraseña</label>
+          <input
+            type="password"
+            id="repetirContrasena"
+            value={repetirContrasena}
+            onChange={(e) => setRepetirContrasena(e.target.value)}
+            required
+          />
+        </div>
+        <div className="campo">
+          <label htmlFor="correoElectronico"  >Correo Electrónico</label>
+          <input
+            type="email"
+            id="correoElectronico"
+            value={correoElectronico}
+            onChange={(e) => setCorreoElectronico(e.target.value)}
+            required
+          />
+        </div>
+        <button class="boton2" type="submit">Registrarse</button>
+      </form>
+    </div>
+  );
 }
 
-
-
 export default Registro;
+
