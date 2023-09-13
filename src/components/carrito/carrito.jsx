@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './carrito.css'
 
-function Carrito2() {
-  const [items, setItems] = useState([]); // Estado para los items en el carrito
+function Carrito() {
+  const [items, setItems] = useState([]); 
 
-  // Función para añadir un item al carrito
   const addItem = (item) => {
     setItems([...items, item]);
   };
@@ -16,7 +15,7 @@ function Carrito2() {
   };
 
   const pagar = () => {
-    alert('Pago completado en el carrito. Gracias por su compra.');
+    alert('Pago completado. Gracias por su compra.');
   };
 
   return (
@@ -36,4 +35,4 @@ function Carrito2() {
   );
 }
 
-export default Carrito2;
+export default Carrito;

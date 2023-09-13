@@ -4,9 +4,17 @@ import './login.css';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [mensaje, setMensaje] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
+
+    // Simulación de validación de correo y contraseña
+    if (email === 'correo@example.com' && password === 'contraseña') {
+      setMensaje('Iniciaste sesión con éxito');
+    } else {
+      setMensaje('El correo es inexistente o la contraseña es incorrecta');
+    }
   };
 
   return (
@@ -35,8 +43,10 @@ function Login() {
         </div>
         <button className="boton3" type="submit">Iniciar Sesión</button>
       </form>
+      {mensaje && <div className="mensaje">{mensaje}</div>}
     </div>
   );
 }
 
 export default Login;
+

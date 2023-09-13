@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
-import './registro.css'; 
+import './registro.css';
 
 function Registro() {
-  // Estados para los campos del formulario
   const [usuario, setUsuario] = useState('');
   const [contrasena, setContrasena] = useState('');
   const [repetirContrasena, setRepetirContrasena] = useState('');
   const [correoElectronico, setCorreoElectronico] = useState('');
+  const [registroCompletado, setRegistroCompletado] = useState(false);
+  const [mostrarTic, setMostrarTic] = useState(false);
 
-  // Manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar los datos a tu servidor o hacer lo que necesites
-    console.log('Datos enviados:', { usuario, contrasena, correoElectronico });
+
+    
+    setTimeout(() => {
+      setRegistroCompletado(true);
+      setMostrarTic(true);
+
+      
+      setTimeout(() => {
+        setMostrarTic(false);
+      }, 2000);
+    }, 1000); 
   };
 
   return (
@@ -26,6 +35,16 @@ function Registro() {
             id="usuario"
             value={usuario}
             onChange={(e) => setUsuario(e.target.value)}
+            required
+          />
+        </div>
+        <div className="campo">
+          <label htmlFor="correoElectronico">Correo Electrónico</label>
+          <input
+            type="email"
+            id="correoElectronico"
+            value={correoElectronico}
+            onChange={(e) => setCorreoElectronico(e.target.value)}
             required
           />
         </div>
@@ -49,24 +68,21 @@ function Registro() {
             required
           />
         </div>
-        <div className="campo">
-          <label htmlFor="correoElectronico">Correo Electrónico</label>
-          <input
-            type="email"
-            id="correoElectronico"
-            value={correoElectronico}
-            onChange={(e) => setCorreoElectronico(e.target.value)}
-            required
-          />
-        </div>
-        <button className="boton2" type="submit">Enviar</button>
-        
+        <button className="boton2" type="submit">
+          Enviar
+        </button>
+        {registroCompletado && (
+          <div className="registro-completado">
+            <div className={`tic ${mostrarTic ? 'mostrar' : ''}`}>
+              <div className="brazo1"></div>
+              <div className="brazo2"></div>
+            </div>
+            <p>Registro completado</p>
+          </div>
+        )}
       </form>
     </div>
   );
 }
 
 export default Registro;
-
-
-
