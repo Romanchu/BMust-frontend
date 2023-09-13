@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './login.css'; // Agrega estilos CSS para el formulario de inicio de sesión
+import './login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -7,7 +7,6 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para autenticar al usuario con el email y contraseña
   };
 
   return (
@@ -34,7 +33,7 @@ function Login() {
             required
           />
         </div>
-        <button type="submit">Iniciar Sesión</button>
+        <button className="boton3" type="submit">Iniciar Sesión</button>
       </form>
     </div>
   );

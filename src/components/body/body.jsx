@@ -13,7 +13,7 @@ export default function Body(){
                 <img src={padtres} alt="imgpad" class="pad3"/>
                 <img src={padcuatro} alt="imgpad" class="pad4"/>
             <div class="comprar">
-                <button>
+                <button className="boton1">
                     <a class="boton" href="./carrito/carrito.html">
                         <span></span>
                         <span></span>

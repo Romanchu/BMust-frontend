@@ -7,8 +7,10 @@
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  text-align: center; /* Centra el contenido en todos los tamaños de pantalla */
+  text-align: center; 
 }
+
+
 
 h2 {
   text-align: center;
@@ -35,7 +37,7 @@ input[type="email"] {
 }
 
 .boton2 {
-  width: 10%; /* Haz que el botón ocupe todo el ancho disponible */
+  width: 100%; 
   padding: 10px;
   background-color: #4F4557;
   color: #fff;
@@ -45,17 +47,17 @@ input[type="email"] {
 }
 
 .boton2:hover {
-  background-color: #654a67; /* Cambia el color al pasar el mouse */
+  background-color: #654a67; 
 }
 
-button:active {
+.boton2:active {
   transform: scale(0.96);
 }
 
    
 @media (min-width: 768px) {
   .registro-container {
-    flex-direction: row; /* Muestra los elementos en una fila en dispositivos grandes */
-    justify-content: center; /* Centra horizontalmente en dispositivos grandes */
+    flex-direction: row; 
+    justify-content: center; 
   }
 }

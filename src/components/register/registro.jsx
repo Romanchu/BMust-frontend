@@ -17,7 +17,7 @@ function Registro() {
 
   return (
     <div className="registro-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="formStyle">
         <h2>Registro</h2>
         <div className="campo">
           <label htmlFor="usuario">Usuario</label>
@@ -59,7 +59,8 @@ function Registro() {
             required
           />
         </div>
-        <button className="boton" type="submit">Enviar</button>
+        <button className="boton2" type="submit">Enviar</button>
+        
       </form>
     </div>
   );

@@ -1,29 +1,22 @@
 import React, { useState } from 'react';
+import './carrito.css'
 
-function Carrito() {
-  // Estado para almacenar los items seleccionados
-  const [items, setItems] = useState([]);
+function Carrito2() {
+  const [items, setItems] = useState([]); // Estado para los items en el carrito
+
   // Función para añadir un item al carrito
   const addItem = (item) => {
     setItems([...items, item]);
   };
-  // Función para eliminar un item del carrito
+
   const removeItem = (index) => {
     const newItems = [...items];
     newItems.splice(index, 1);
     setItems(newItems);
   };
 
-  // Función para modificar la cantidad de un item en el carrito
-  const modifyItem = (index, newQuantity) => {
-    const newItems = [...items];
-    newItems[index].quantity = newQuantity;
-    setItems(newItems);
-  };
-
-  // Calcular el total de la compra
-  const calculateTotal = () => {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+  const pagar = () => {
+    alert('Pago completado en el carrito. Gracias por su compra.');
   };
 
   return (
@@ -31,20 +24,16 @@ function Carrito() {
       <h2>Carrito de Compras</h2>
       <ul>
         {items.map((item, index) => (
-          <li key={index}>
-            {item.name} - ${item.price} x {item.quantity}{' '}
-            <button onClick={() => removeItem(index)}>Eliminar</button>
-            <input
-              type="number"
-              value={item.quantity}
-              onChange={(e) => modifyItem(index, e.target.value)}
-            />
+          <li className="lista1" key={index}>
+            {item.name} - ${item.price}
+            <button className="boton4" onClick={() => removeItem(index)}>Eliminar</button>
           </li>
         ))}
       </ul>
-      <p>Total: ${calculateTotal()}</p>
+      <button className="boton4" onClick={addItem}>Añadir Items</button>
+      <button className="boton4" onClick={pagar}>Ir a Pagar</button>
     </div>
   );
 }
 
-export default Carrito;
+export default Carrito2;
