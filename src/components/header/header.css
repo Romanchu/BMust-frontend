@@ -23,7 +23,7 @@
     background-color: #674483;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
-    padding: 10px; /* Añade un espaciado uniforme alrededor del contenido */
+    padding: 10px; 
   }
   
   .navbar {
@@ -35,14 +35,14 @@
     padding: 0;
   }
   
-  /* Media query para pantallas más grandes (por ejemplo, tabletas y escritorio) */
+  
   @media (max-width: 768px) {
     .sectionMain {
-      flex-direction: column; /* Cambia a la disposición de columna en dispositivos móviles */
+      flex-direction: column; 
     }
   
     .navbar {
-      flex-direction: column; /* Cambia a la disposición de columna en dispositivos móviles */
+      flex-direction: column; 
     }
   }
   

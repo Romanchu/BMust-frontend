@@ -8,8 +8,6 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    // Simulación de validación de correo y contraseña
     if (email === 'correo@example.com' && password === 'contraseña') {
       setMensaje('Iniciaste sesión con éxito');
     } else {
