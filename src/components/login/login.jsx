@@ -5,13 +5,12 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mensaje, setMensaje] = useState('');
-
   const handleLogin = (e) => {
     e.preventDefault();
     if (email === 'correo@example.com' && password === 'contraseña') {
-      setMensaje('Iniciaste sesión con éxito');
+      setMensaje('Iniciaste sesión con éxito.');
     } else {
-      setMensaje('El correo es inexistente o la contraseña es incorrecta');
+      setMensaje('Fallo en el inicio de seión.');
     }
   };
 

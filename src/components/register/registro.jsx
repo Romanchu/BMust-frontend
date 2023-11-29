@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './registro.css';
 
 function Registro() {
@@ -9,19 +10,31 @@ function Registro() {
   const [registroCompletado, setRegistroCompletado] = useState(false);
   const [mostrarTic, setMostrarTic] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    
-    setTimeout(() => {
-      setRegistroCompletado(true);
-      setMostrarTic(true);
+    if (contrasena !== repetirContrasena) {
+      alert('Las contraseñas deben coincidir');
+      return;
+    }
 
-      
+    try {
+      await axios.post('http://localhost:8080/registro', {
+        usuario,
+        contrasena,
+        correoElectronico,
+      });
+
+      setRegistroCompletado(true);
+      setMostrarTic(true)
+
       setTimeout(() => {
         setMostrarTic(false);
       }, 2000);
-    }, 1000); 
+    } catch (error) {
+      alert('Error al registrarse');
+      console.log('Error al registrarse ', error);
+    }
   };
 
   return (
@@ -86,3 +99,4 @@ function Registro() {
 }
 
 export default Registro;
+

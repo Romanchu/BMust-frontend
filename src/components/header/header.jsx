@@ -14,8 +14,6 @@ export default function Header(){
             <div class="navbar">
                 <ul class="navbar">
                     <li class="item"><Link to="/" class="link">Inicio</Link> </li>
-                    <li class="item"><Link to="./padspagina/pad.html" class="link">Pads</Link></li>
-                    <li class="item"><Link to="./personalizacionespag/personalizados.html" class="link">Personalización</Link></li>
                     <li class="item"><Link to="/carrito" class="link">Carrito</Link></li>
                     <li class="item"><Link to="/login" class="link">Iniciar Sesión</Link></li>
                     <li class="item"><Link to="/registro" class="link">Registrarse</Link></li>

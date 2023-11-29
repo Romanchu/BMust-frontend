@@ -100,8 +100,8 @@ body{
 
 .boton1{
     position: absolute;
-    top: 45%;
-    left: 1%;
+    top: 50%;
+    right: 16%;
     background-color: #4F4557;
     padding: 10px 30px;
     border: none;
