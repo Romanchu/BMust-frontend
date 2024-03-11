@@ -4,6 +4,7 @@ import './body.css';
 import paduno from '../../multimedia/pad1.webp';
 
 
+
 export default function Body() {
   const handleCompraClick = () => {
     alert('Producto añadido'); 
