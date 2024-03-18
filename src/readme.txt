@@ -25,3 +25,21 @@ la respuesta al usuario.
 Una "palabra del prompt" se refiere a una unidad individual dentro del texto de entrada. 
 Puede ser una palabra, frase o cualquier parte del "prompt" proporcionado al modelo para generar una respuesta.
 Cada palabra contribuye al contexto general utilizado por el modelo para generar una respuesta relevante.
+
+Para ChatGPT, un "token" es una unidad básica de texto después de que el modelo ha dividido la entrada
+en partes más pequeñas y significativas para su procesamiento. En el contexto del lenguaje natural,
+un token podría ser una palabra, una puntuación, un número o incluso partes de una palabra (subpalabras).
+
+Ejemplos:
+
+Entrada original: "¡Hola! ¿Cómo estás?"
+
+Tokens:
+
+"¡Hola!"
+"¿"
+"Cómo"
+"estás"
+"?"
+
+Cada uno de estos elementos se considera un token después de la tokenización del texto original.
