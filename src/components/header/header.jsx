@@ -3,6 +3,7 @@ import Bm from "../../multimedia/Bemust.png";
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import {predicts} from "../../dataset/predicts"
 
 
 export default function Header(){
@@ -40,3 +41,5 @@ const Productos = [
     { label: 'Producto 3' },
     { label: 'Producto 4' },
 ];
+
+//dame pene nyaaaa
